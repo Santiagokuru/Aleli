@@ -7,11 +7,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="flex items-center justify-center min-h-screen">
+<body class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
     <div class="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
         <div class="flex items-center justify-center mb-6">
             <img src="https://media.licdn.com/dms/image/v2/D4D0BAQG79whYg5qHoQ/company-logo_200_200/company-logo_200_200/0/1681371766614/simskills_logo?e=2147483647&v=beta&t=mNkVTqyByBm55phxjUDLQ0UUzs4Ae1Lc1TLhl2uCuwE" alt="Avatar" class="w-16 h-16 rounded-full mr-4">
-            <h1 class="text-3xl font-bold text-center">Bienvenido a nuestro Chat</h1>
+            <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-200">Bienvenido a nuestro Chat</h1>
         </div>
         <div id="chat-container" class="h-96 w-full bg-gray-100 dark:bg-gray-700 rounded-lg overflow-y-auto p-4 mb-4">
             <!-- Chat messages will appear here -->
@@ -62,87 +62,3 @@
     </script>
 </body>
 </html>
-
-
-Share
-
-Prompt
-
-<current html><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Chat Grande</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="flex items-center justify-center min-h-screen">
-    <div class="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-        <div class="flex items-center justify-center mb-6">
-            <img src="https://media.licdn.com/dms/image/v2/D4D0BAQG79whYg5qHoQ/company-logo_200_200/company-logo_200_200/0/1681371766614/simskills_logo?e=2147483647&v=beta&t=mNkVTqyByBm55phxjUDLQ0UUzs4Ae1Lc1TLhl2uCuwE" alt="Avatar" class="w-16 h-16 rounded-full mr-4">
-            <h1 class="text-3xl font-bold text-center">Bienvenido a nuestro Chat</h1>
-        </div>
-        <div id="chat-container" class="h-96 w-full bg-gray-100 dark:bg-gray-700 rounded-lg overflow-y-auto p-4 mb-4">
-            <!-- Chat messages will appear here -->
-            <div class="chat-message">
-                <p class="text-gray-800 dark:text-gray-200">¡Hola! ¿Cómo estás?</p>
-            </div>
-        </div>
-        <form id="chat-form" class="flex">
-            <input type="text" id="chat-input" class="flex-1 p-4 rounded-l-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe tu mensaje...">
-            <button type="submit" class="p-4 rounded-r-lg bg-blue-500 text-white font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Enviar</button>
-        </form>
-    </div>
-
-    <script>
-        document.getElementById('chat-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const input = document.getElementById('chat-input');
-            const message = input.value.trim();
-            if (message) {
-                const chatContainer = document.getElementById('chat-container');
-                const newMessage = document.createElement('div');
-                newMessage.className = 'chat-message mb-2';
-                newMessage.innerHTML = `<p class="text-gray-800 dark:text-gray-200">${message}</p>`;
-                chatContainer.appendChild(newMessage);
-                input.value = '';
-                chatContainer.scrollTop = chatContainer.scrollHeight;
-            }
-        });
-
-        (function(d, t) {
-            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
-                window.voiceflow.chat.load({
-                    verify: { projectID: '67eabebb2ed456f282f021d5' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production',
-                    voice: {
-                        url: "https://runtime-api.voiceflow.com"
-                    },
-                    render: {
-                        mode: 'embedded',
-                        target: document.getElementById('chat-container')
-                    }
-                });
-            }
-            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-        })(document, 'script');
-    </script>
-</body>
-</html></current html>
-
-<query>Generate a single HTML file based on this query: "quiero crear una pagina en donde embeber un chat y que se vea grande
-
-"</query>
-<output instructions>
-The output should be valid HTML and should be creative and well-structured. Use Tailwind CSS, load it in the <head> tag with <script src="https://cdn.tailwindcss.com"></script>.
-
-The app should follow the user's light theme preference. Use lighter background colors and darker text colors. Make sure the colors have good contrast and are accessible.
-
-Return the HTML content wrapped in triple backticks with 'html' language specifier, like this:
-```html
-<your html code here>
-```
-</output instructions>
